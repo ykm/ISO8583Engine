@@ -1,0 +1,3 @@
+ISO8583Engine:
+
+This is a simple API to create a ISO8583 Request object as well as parse the ISO8583 response using a configurable xml file.  
