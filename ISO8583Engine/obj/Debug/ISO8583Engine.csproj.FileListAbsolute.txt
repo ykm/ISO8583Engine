@@ -1,0 +1,10 @@
+C:\Documents and Settings\mishray\Local Settings\Application Data\Temporary Projects\ISO8583Engine\bin\Debug\ISO8583Engine.exe
+C:\Documents and Settings\mishray\Local Settings\Application Data\Temporary Projects\ISO8583Engine\bin\Debug\ISO8583Engine.pdb
+C:\Documents and Settings\mishray\Local Settings\Application Data\Temporary Projects\ISO8583Engine\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mishray\Local Settings\Application Data\Temporary Projects\ISO8583Engine\obj\Debug\ISO8583Engine.exe
+C:\Documents and Settings\mishray\Local Settings\Application Data\Temporary Projects\ISO8583Engine\obj\Debug\ISO8583Engine.pdb
+C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.pdb
+C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\obj\Debug\ResolveAssemblyReference.cache
+C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.pdb
+C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.exe
+C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.exe
