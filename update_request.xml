@@ -1,0 +1,66 @@
+<Message>
+	<ISO8583Message>
+		<IsoKeys>
+			<Key Index="BankID" Length="11">504511</Key>
+			<Key Index="BranchCode" Length="8">1512</Key>
+		</IsoKeys>
+		<ISO8583Fields Category="Common"> 
+			<Field Index="1" Header="0" MaxLength="8"/>
+			<Field Index="4" Header="0" MaxLength="16">0000000000000000</Field>
+			<Field Index="11" Header="0" MaxLength="12">954556223322</Field>
+			<Field Index="12" Header="0" MaxLength="14">time:yyyyMMddHHmmss</Field>
+			<Field Index="17" Header="0" MaxLength="8">time:yyyyMMdd</Field>
+			<Field Index="24" Header="0" MaxLength="3">200</Field>
+			<Field Index="32" Header="2" MaxLength="11">504511</Field>
+			<Field Index="34" Header="2" MaxLength="28">035708815408</Field>
+			<Field Index="41" Header="0" MaxLength="16">BWY</Field>
+			<Field Index="43" Header="2" MaxLength="99">BANKAWAY</Field>
+			<Field Index="49" Header="0" MaxLength="3">INR</Field>
+			<Field Index="102" Header="2" MaxLength="35">key:BankID+key:BranchCode+on-us:AccountNumber</Field>
+			<Field Index="123" Header="3" MaxLength="3">BWY</Field>
+		</ISO8583Fields>
+		<ISO8583Fields Category="Update">	
+			<Field Index="3" Header="0" MaxLength="6">930000</Field>
+			<Field Index="125" Header="3" MaxLength="999">on-us:UpdateRequest</Field>
+		</ISO8583Fields>
+		<ISO8583Fields Category="AccountInfo">
+			<Field Index="3" Header="0" MaxLength="6">820000</Field>
+		</ISO8583Fields>
+		<ISO8583Fields Category="Response">
+			<Field Index="38" Header="0" MaxLength="6"/>
+			<Field Index="39" Header="0" MaxLength="3"/>
+			<Field Index="48" Header="3" MaxLength="999"/>
+			<Field Index="126" Header="3" MaxLength="999"/>
+			<Field Index="127" Header="3" MaxLength="999"/>
+		</ISO8583Fields>
+	</ISO8583Message>
+</Message>
+
+<!-- 
+Keys are the values ala variable declared in a program, each value's index should be unique, no on-us values in Keys section
+
+The On-Us values are supplied at the runtime as a string array, we try to access these values using array index, so the values are 
+completely dependent on the supplier, thus the xml and the program should be in synchonization, try to keep the On-Us values as
+general as possible, allowing minimum change in the code. 
+
+The ISO8583 Fields are organised as categories. In the above example, the Category "Common" contains all the fields common to both the 
+update as well as the account info ISO8583 request. THe category "Update" contains the field belonging to update request whereas the 
+category "AccountInfo" contains fields belonging to account request. 
+
+The Category "Response" is a special one, it only contains those fields which are not present in any of the requests but in the 
+response sent by the CBS. Thus, the Category "Response" cannot be used to create any request. If Used the engine will throw an error.
+
+When we ask the ISO8583 engine to generate a request, we do it by supplying the categories. 
+eg: to generate a complete update request we will have to combine categories "0" and "1".
+
+However, you cannot combine categories containing the same field indexes, or from the category "Response"
+eg: You cannot combine the categories "Update" and "AccountInfo", because both contain the field 3 as their part. 
+
+So if the same field is contained by all the requests 
+
+Also the field values cannot contain + and : as they are used by the engine logic
+
+"time:" accessor is used to insert datetime values, accessor is followed the datetime format, for different formats 
+refer the "C# Datetime Format"
+Note: the format is placed exactly as its provided, so keep a watch on the case sensitivity.
+-->
