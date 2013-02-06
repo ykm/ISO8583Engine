@@ -5,11 +5,11 @@ This is a simple API to create a ISO8583 Request object as well as parse the ISO
 
 Keys are the values ala variable declared in a program, each value's index should be unique, no on-us values in Keys section
 
-The On-Us values are supplied at the runtime as a string array, we try to access these values using array index, so the values are 
-completely dependent on the supplier, thus the xml and the program should be in synchonization, try to keep the On-Us values as
-general as possible, allowing minimum change in the code. 
+The On-Us values are supplied at the runtime as a string -> string dictionary, we try to access these values using array index, 
+so the values are completely dependent on the supplier, thus the xml and the program should be in synchonization, try to keep 
+the On-Us values as general as possible, allowing minimum change in the code. 
 
-The ISO8583 Fields are organised as categories. In the above example, the Category "Common" contains all the fields common to both the 
+The ISO8583 Fields are organised as categories. In the sample xml, the Category "Common" contains all the fields common to both the 
 update as well as the account info ISO8583 request. THe category "Update" contains the field belonging to update request whereas the 
 category "AccountInfo" contains fields belonging to account request. 
 
@@ -20,22 +20,20 @@ When we ask the ISO8583 engine to generate a request, we do it by supplying the 
 eg: to generate a complete update request we will have to combine categories "0" and "1".
 
 However, you cannot combine categories containing the same field indexes, or from the category "Response"
-eg: You cannot combine the categories "1" and "2", because both contain the field 3 as their part. 
-
-So if the same field is contained by all the requests 
 
 Also the field values cannot contain + and : as they are used by the engine logic
 
 "time:" accessor is used to insert datetime values, accessor is followed the datetime format, for different formats 
-refer the "C# Datetime Format"
-Note: the format is placed exactly as its provided, so keep a watch on the case sensitivity.
+refer the "C# Datetime Format". Following the datetime format, it could be specified whether the datetime is UTC. 
+eg: time:ddMMyyyy:utc
 
+Note: the format is placed exactly as its provided, so keep a watch on the case sensitivity.
 
 Addition: 29th June, 2012.
 
 Add the padding information in the field itself. Padding start marked by the charachter '|'. Its positioning on the left
 or the right side denotes the padding positioning in the value itself. Padding will be allowed only if the Header value is
-"0"(common sense). Optionally you can also provide the charachter with which the value will be padded. If you want to left
+"0". Optionally you can also provide the charachter with which the value will be padded. If you want to left
 pad a field with charachter '0' use, "0|value" as the field value to the tag. For right padding use "value|0" for padding.
 Note: By default the engine uses right padding and the default padding charachter is with spaces. If you want left padding
 with spaces use "|value" as the field value. 
