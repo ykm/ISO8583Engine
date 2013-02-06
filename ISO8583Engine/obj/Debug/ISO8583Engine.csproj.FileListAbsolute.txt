@@ -8,3 +8,13 @@ C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\obj\Debug\ResolveAssemblyRefere
 C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.pdb
 C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.exe
 C:\ykm\work\projects\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.exe
+C:\ykm\work\projects\code-golfing\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.exe
+C:\ykm\work\projects\code-golfing\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.pdb
+C:\ykm\work\projects\code-golfing\ISO8583Engine\ISO8583Engine\obj\Debug\ResolveAssemblyReference.cache
+C:\ykm\work\projects\code-golfing\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.exe
+C:\ykm\work\projects\code-golfing\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.pdb
+C:\ykm\work\code-golfing\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.dll
+C:\ykm\work\code-golfing\ISO8583Engine\ISO8583Engine\bin\Debug\ISO8583Engine.pdb
+C:\ykm\work\code-golfing\ISO8583Engine\ISO8583Engine\obj\Debug\ResolveAssemblyReference.cache
+C:\ykm\work\code-golfing\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.dll
+C:\ykm\work\code-golfing\ISO8583Engine\ISO8583Engine\obj\Debug\ISO8583Engine.pdb
